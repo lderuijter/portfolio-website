@@ -1,11 +1,11 @@
 import './App.css';
-import { useState } from 'react';
+import project from './projects.json';
 
 const portfolioEigenaar = {
   naam: 'Lucas de Ruijter',
 }
 
-function WelcomeMessage() {
+function WelkomBericht() {
   return (
     <>
       <h1>Welkom op mijn portfolio!</h1>
@@ -14,23 +14,20 @@ function WelcomeMessage() {
   );
 }
 
-function MyButton() {
-  const [count, setCount] = useState(0);
-  function HandleClick() {
-    setCount(count + 1);
-  }
+function Projecten() {
   return (
-    <button onClick={HandleClick}>
-      Counter {count}
-    </button>
+    <>
+      <h1>{project.titel}</h1>
+      <p className='markup'>{project.beschrijving}</p>
+    </>
   )
 }
 
 function App() {
   return (
     <div className="App">
-        <WelcomeMessage/>
-        <MyButton/>
+        <WelkomBericht/>
+        <Projecten/>
     </div>
   );
 }
