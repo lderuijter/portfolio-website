@@ -1,4 +1,16 @@
 {
-    "titel": "Pasimo",
-    "beschrijving": "Pasimo project uitleg"
+    "pasimo": {
+        "titel": "Pasimo",
+        "beschrijving": "Pasimo project uitleg"
+    },
+
+    "slidehub": {
+        "titel": "Slidehub",
+        "beschrijving": "Slidehub project uitleg"
+    },
+
+    "flashcard": {
+        "titel": "Flashcard",
+        "beschrijving": "Flashcard project uitleg"
+    }
 }

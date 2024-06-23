@@ -1,5 +1,5 @@
 import './App.css';
-import project from './projects.json';
+import Projecten from './projectenDisplay';
 
 const portfolioEigenaar = {
   naam: 'Lucas de Ruijter',
@@ -14,21 +14,14 @@ function WelkomBericht() {
   );
 }
 
-function Projecten() {
-  return (
-    <>
-      <h1>{project.titel}</h1>
-      <p className='markup'>{project.beschrijving}</p>
-    </>
-  )
-}
-
 function App() {
   return (
-    <div className="App">
-        <WelkomBericht/>
-        <Projecten/>
-    </div>
+    <>
+      <div className="App">
+        <WelkomBericht />
+      </div>
+      <Projecten/>
+    </>
   );
 }
 
