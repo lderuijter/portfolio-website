@@ -1,5 +1,7 @@
 import './App.css';
-import Projecten from './projectenDisplay';
+import Projecten from './projecten';
+import Navbar from './navbar';
+import Footer from './footer';
 
 const portfolioEigenaar = {
   naam: 'Lucas de Ruijter',
@@ -17,10 +19,12 @@ function WelkomBericht() {
 function App() {
   return (
     <>
-      <div className="App">
+      <Navbar />
+      <div className='main'>
         <WelkomBericht />
         <Projecten />
       </div>
+      <Footer />
     </>
   );
 }

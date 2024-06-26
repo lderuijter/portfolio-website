@@ -1,5 +1,11 @@
-.App {
-    margin-left: 15px;
+.nav {
+    width: fit-content;
+    position: sticky;
+}
+
+.main {
+    width: 80%;
+    margin: auto;
 }
 
 .markup {

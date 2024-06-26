@@ -9,8 +9,18 @@
         "beschrijving": "Slidehub project uitleg"
     },
 
+    "symfony": {
+        "titel": "Symfony User WebApp",
+        "beschrijving": "Symfony User WebApp project uitleg"
+    },
+
     "flashcard": {
         "titel": "Flashcard",
         "beschrijving": "Flashcard project uitleg"
+    },
+
+    "laravel": {
+        "titel": "Laravel project om te leren",
+        "beschrijving": "Laravel project uitleg wat ik ga leren"
     }
 }
