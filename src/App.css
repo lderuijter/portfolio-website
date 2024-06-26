@@ -1,15 +1,36 @@
-.nav {
+.navbar {
     width: fit-content;
-    position: sticky;
+    background-color: rgb(36, 36, 36);
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    overflow: auto;
+}
+
+.nav-link {
+    color: white !important;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(36, 36, 36);
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+.copyright-contact {
+    float: left;
+}
+
+.powered-by {
+    float: right;
 }
 
 .main {
-    width: 80%;
-    margin: auto;
-}
-
-.markup {
-    color: purple;
-    font: bold;
-    font-size: large;
+    background-color: rgb(36, 36, 36);
+    color: white;
 }
