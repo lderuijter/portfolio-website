@@ -14,7 +14,7 @@ class Projecten extends React.Component {
   
   class ProjectenReturn extends React.Component {
     render() {
-        return <li>{this.props.titel + " - " + this.props.beschrijving}</li>;
+        return <div>{this.props.titel + " - " + this.props.beschrijving}</div>;
     }
   }
   
