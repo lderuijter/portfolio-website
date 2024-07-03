@@ -1,13 +1,15 @@
 .navbar {
     width: 100%;
     background-color: rgb(36, 36, 36);
-    margin: 0;
-    padding: 0;
     position: fixed;
     overflow: auto;
 }
 
 .nav-link {
+    color: white !important;
+}
+
+.navbar-brand {
     color: white !important;
 }
 
@@ -34,4 +36,21 @@ html, .main {
     background-color: rgb(36, 36, 36);
     color: white;
     text-align: center;
+}
+
+.portfolio-image {
+    width: 250px;
+    height: 400px;
+}
+
+.col-info {
+    padding-top: 20px;
+    margin-left: 100px;
+    float: left;
+}
+
+.col-image {
+    padding-top: 100px;
+    margin-right: 200px;
+    float: right;
 }

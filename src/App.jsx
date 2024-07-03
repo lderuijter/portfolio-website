@@ -1,5 +1,5 @@
-import { CNav, CNavItem, CNavLink } from '@coreui/react';
-import React from "react";
+import { CFooter, CNavbar, CContainer, CNavbarBrand, CNavbarToggler, CCollapse, CNavbarNav, CNavLink} from '@coreui/react';
+import React, { useState } from 'react';
 import './App.css';
 import Projecten from './projecten';
 import {
@@ -8,7 +8,6 @@ import {
   Routes,
   Outlet,
 } from "react-router-dom";
-import { CFooter } from '@coreui/react';
 
 const portfolioEigenaar = {
   naam: 'Lucas de Ruijter',
@@ -17,8 +16,15 @@ const portfolioEigenaar = {
 function Home() {
   return (
     <>
-      <h1>Welkom op mijn portfolio!</h1>
-      <p>Ik ben {portfolioEigenaar.naam}</p>
+    <div className='container'>
+      <div className='col-info'>
+        <h1>Welkom op mijn portfolio!</h1>
+        <p>Ik ben {portfolioEigenaar.naam}</p>
+      </div>
+      <div className='col-image'>
+        <img className='portfolio-image' alt='foto van Lucas' src='images/lucas.png'/>
+      </div>
+    </div>
     </>
   );
 }
@@ -47,19 +53,31 @@ function Footer() {
 }
 
 function App() {
+  const [visible, setVisible] = useState(false)
   return (
     <>
+      <CNavbar expand="lg" className="bg-body-dark navbar">
+      <CContainer fluid>
+        <CNavbarBrand href="#">Lucas de Ruijter</CNavbarBrand>
+        <CNavbarToggler
+          aria-label="Toggle navigation"
+          aria-expanded={visible}
+          onClick={() => setVisible(!visible)}
+        />
+        <CCollapse className="navbar-collapse" visible={visible}>
+          <CNavbarNav as="nav">
+            <CNavLink className="nav-link" href="/#" active>
+              Home
+            </CNavLink>
+            <CNavLink className="nav-link" href="/projecten">
+            Projecten
+            </CNavLink>
+          </CNavbarNav>
+        </CCollapse>
+      </CContainer>
+    </CNavbar>
     <Router>
-    <CNav className="flex-column navbar">
-      <CNavItem>
-        <CNavLink className="nav-link">
-          <CNavLink className="nav-link" href="/#">Home</CNavLink>
-        </CNavLink>
-      </CNavItem>
-      <CNavItem>
-        <CNavLink className="nav-link" href="/projecten">Projecten</CNavLink>
-      </CNavItem>
-    </CNav><div className="main">
+    <div className="main">
         <Routes>
           <Route path="/" element={<Outlet />}>
             <Route index element={<Home />} />
